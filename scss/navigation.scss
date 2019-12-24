@@ -1,0 +1,47 @@
+.header-bar {
+  height: 600px;
+
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/physiotherapy-567021_1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: white;
+
+
+}
+
+.nav-bar {
+  width: 960px;
+  margin: 0 auto;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+
+  height: 80px;
+  align-items: center;
+}
+.list-item {
+  text-decoration: none;
+  color: white;
+
+;
+}
+
+.info {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 120px;
+  &__wrapper {
+    width: 640px;
+  }
+  &__title {
+    font-size: 28px;
+  }
+  &__text {
+    margin-top: 40px;
+  }
+}

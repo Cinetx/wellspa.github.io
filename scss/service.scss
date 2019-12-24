@@ -1,0 +1,268 @@
+.services {
+  // display: grid;
+  // width: 960px;
+  margin: 0 auto;
+  margin-top: 120px;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+.item {
+
+}
+.item1 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_1.jpg');
+  background-size: cover;
+
+}
+.item2 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_2.jpg');
+  background-size: cover;
+
+
+}
+.item3 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_3.jpg');
+  background-size: cover;
+
+}
+.item4 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_4.jpg');
+    background-size: cover;
+}
+
+
+// .test {
+//   display: flex;
+//   width: 960px;
+//   margin: 0 auto;
+// }
+// .services:hover > .test > .item {
+
+//    width: 100px;
+// }
+// .item {
+
+//   height: 300px;
+//     font-size: 24px;
+//     color: white;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// // width: 50%;
+//   flex-grow: 1;
+//   transition: 0.9s;
+
+//   flex-direction: column;
+// transition: .55s opacity, .55s;
+
+// }
+
+
+// .test__text{
+
+// font-size: 0.8em;
+
+// justify-content: flex-start;
+//   opacity: 0;
+// transition: .55s opacity, .55s;
+
+// width: 600px;
+//   }
+// .item:hover {
+//   flex-grow: 3;
+
+// transition: .55s opacity, .55s;
+
+//   .test__text {
+//     opacity: 1;
+//     // transition: .55s opacity, .55s visibility;
+//     transition: .55s opacity, .55s;
+//     // transition: 0.9s visibility;
+// // padding: 60px;
+// width: 600px;
+// visibility: visible;
+
+
+//   }
+//   }
+
+// .item:hover + div > .test__text{
+//     // opacity: 1;
+//     // width: 200px;
+//     // visibility: visible;
+// }
+
+
+.services__content {
+  display: flex;
+}
+
+
+.services__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  // justify-content: center;
+  // align-items: center;
+
+
+  font-size: 24px;
+  color: white;
+
+  height: 300px;
+  padding: 50px;
+  width: 50%;
+
+  transition: 0.9s;
+
+
+
+
+}
+
+.services__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.services__wrapper:hover {
+
+width: 60%;
+transition: 0.9s;
+
+  .services__text {
+    opacity: 1;
+    transition: 0.9s;
+    // visibility: visible;
+  }
+  }
+  .services__text{
+
+width: 30rem;
+font-size: 1.4rem;
+margin-bottom: 2rem;
+
+  // opacity: 0;
+transition: 0.9s;
+
+// width: 600px;
+  }
+
+
+  //button кнопка
+
+
+
+
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+.services {
+  background-color: #fcede8;
+  padding-bottom: 2rem;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  // outline: none;
+  border: 0;
+
+  // vertical-align: middle;
+  // text-decoration: none;
+  background: transparent;
+  padding: 0;
+  // font-size: inherit;
+  // font-family: inherit;
+  &.services__button {
+    width: 14rem;
+    height: auto;
+
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: $main_color;
+      border-radius: 1.625rem;
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: white;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2rem;
+
+
+      color: $main_color;
+      font-weight: 700;
+
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+        background: white;
+        transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: white;
+    }
+  }
+}
+
+
+
+
