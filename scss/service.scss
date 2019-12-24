@@ -104,23 +104,26 @@
 
 .services__content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 
 .services__wrapper {
   display: flex;
   flex-direction: column;
-
+  // 
+  flex-grow: 1;
   // justify-content: center;
   // align-items: center;
 
 
-  font-size: 24px;
+  // font-size: 24px;
   color: white;
 
   height: 300px;
   padding: 50px;
-  width: 50%;
+  // width: 50%;
+  
 
   transition: 0.9s;
 
@@ -138,7 +141,8 @@
 
 .services__wrapper:hover {
 
-width: 60%;
+// width: 60%;
+flex-grow: 3;
 transition: 0.9s;
 
   .services__text {
@@ -150,7 +154,7 @@ transition: 0.9s;
   .services__text{
 
 width: 30rem;
-font-size: 1.4rem;
+font-size: 1.2rem;
 margin-bottom: 2rem;
 
   // opacity: 0;
