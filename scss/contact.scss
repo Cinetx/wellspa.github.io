@@ -1,0 +1,80 @@
+.contact {
+    background-color: #f5f3f3;
+    
+}
+.contact__wrapper {
+    width: 960px;
+    margin: 0 auto;
+    
+}
+.contact__sub-wrapper{
+    display: flex;
+}
+.contact__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 70%;
+
+    margin-top: 2rem;    
+}
+.contact__form__info {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    // border: 2px solid red;
+}
+.contact__form__input-wrapper {
+    width: 49%;
+}
+.contact__form__input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #666666;
+
+    
+}
+.contact__form__select {
+    margin-top: 2rem;
+    position: relative;
+    flex-basis: 100%;
+}
+.contact__form__select select {
+   
+    display: block;
+    width: 100%; /* от ширины блока div */
+    padding: .75rem 2.5rem .75rem 1rem;/* отступы от текста до рамки */
+    background: white; /* убираем фон */
+    border: 1px solid #ccc; /* рамка */
+    border-radius: 3px;/* скругление полей формы */
+    -webkit-appearance: none;/* Chrome */
+    -moz-appearance: none;/* Firefox */
+    appearance: none;/* убираем дефолнтные стрелочки */
+    font-family: inherit;/* наследует от родителя */
+    font-size: 1rem;
+    color: #444;
+}
+.contact__form__select:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+}
+.contact__info {
+    flex-basis: 30%;
+    
+}
+.contact__form__text {
+    width: 100%;
+    height: 300px;
+
+    margin-top: 2rem;
+
+    border: 1px solid #666666;
+}

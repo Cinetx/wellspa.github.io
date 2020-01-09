@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url(slick-theme.css);
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -140,7 +142,11 @@ select {
 
 .reviews__wrapper {
   display: flex;
-  flex-direction: row; }
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.slick-list {
+  order: -1; }
 
 .reviews__content {
   padding: 20px;
@@ -154,6 +160,233 @@ select {
 
 .reviews__text {
   font-size: 1.5rem; }
+
+/* Slider */
+/* Slider */
+.slick-slider {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+.slick-list:focus {
+  outline: none; }
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: ''; }
+
+.slick-track:after {
+  clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  margin: 5px;
+  height: 100%;
+  min-height: 1px; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide img {
+  display: block; }
+
+.slick-slide.slick-loading img {
+  display: none; }
+
+.slick-slide.dragging img {
+  pointer-events: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  border: none; }
+
+.slick-arrow {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 40px;
+  background-color: transparent;
+  border-radius: 1.625rem; }
+
+.slick-next {
+  margin-left: 20px; }
+
+.slick-prev {
+  margin-right: 20px; }
+
+.slick-prev::after, .slick-prev::before {
+  right: 45%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.slick-prev::after {
+  border-right-color: white;
+  border-width: 8px;
+  margin-top: -8px; }
+
+.slick-prev::before {
+  border-color: rgba(194, 225, 245, 0);
+  border-right-color: #ffa188;
+  border-width: 16px;
+  margin-top: -16px; }
+
+.slick-next::after, .slick-next::before {
+  left: 40%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.slick-next::after {
+  border-left-color: white;
+  border-width: 8px;
+  margin-top: -8px; }
+
+.slick-next::before {
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #ffa188;
+  margin-top: -16px;
+  border-width: 16px; }
+
+.contact {
+  background-color: #f5f3f3; }
+
+.contact__wrapper {
+  width: 960px;
+  margin: 0 auto; }
+
+.contact__sub-wrapper {
+  display: flex; }
+
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 70%;
+  margin-top: 2rem; }
+
+.contact__form__info {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between; }
+
+.contact__form__input-wrapper {
+  width: 49%; }
+
+.contact__form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #666666; }
+
+.contact__form__select {
+  margin-top: 2rem;
+  position: relative;
+  flex-basis: 100%; }
+
+.contact__form__select select {
+  display: block;
+  width: 100%;
+  /* от ширины блока div */
+  padding: .75rem 2.5rem .75rem 1rem;
+  /* отступы от текста до рамки */
+  background: white;
+  /* убираем фон */
+  border: 1px solid #ccc;
+  /* рамка */
+  border-radius: 3px;
+  /* скругление полей формы */
+  -webkit-appearance: none;
+  /* Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* убираем дефолнтные стрелочки */
+  font-family: inherit;
+  /* наследует от родителя */
+  font-size: 1rem;
+  color: #444; }
+
+.contact__form__select:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  z-index: 1;
+  margin-top: -3px; }
+
+.contact__info {
+  flex-basis: 30%; }
+
+.contact__form__text {
+  width: 100%;
+  height: 300px;
+  margin-top: 2rem;
+  border: 1px solid #666666; }
 
 .services {
   margin: 0 auto;

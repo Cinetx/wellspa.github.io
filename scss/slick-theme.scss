@@ -1,10 +1,10 @@
-/* @charset 'UTF-8';
+@charset 'UTF-8';
 /* Slider */
 .slick-loading .slick-list
 {
     background: #fff url('./ajax-loader.gif') center center no-repeat;
-    
-} 
+    border: 2px solid red;
+}
 
 /* Icons */
 @font-face
@@ -15,40 +15,34 @@
 
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-    
 }
 /* Arrows */
-
-
 .slick-prev,
 .slick-next
 {
     font-size: 0;
     line-height: 0;
-    
 
-    /* position: absolute; */
-    /* top: 50%; */
+    position: absolute;
+    top: 50%;
 
     display: block;
 
-    /* width: 20px;
+    width: 20px;
     height: 20px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%); */
-    
+    transform: translate(0, -50%);
 
     cursor: pointer;
 
     color: transparent;
     border: none;
-    
-    
-    
+    outline: none;
+    background: transparent;
 }
-/* .slick-prev:hover,
+.slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus
@@ -56,23 +50,35 @@
     color: transparent;
     outline: none;
     background: transparent;
-} */
-/* .slick-prev:hover:before,
+}
+.slick-prev:hover:before,
 .slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before
 {
     opacity: 1;
-} */
-/* .slick-prev.slick-disabled:before,
+}
+.slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {
     opacity: .25;
-} */
+}
 
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
 
+    opacity: .75;
+    color: white;
 
-/* .slick-prev
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
 {
     left: -25px;
 }
@@ -106,7 +112,7 @@
 [dir='rtl'] .slick-next:before
 {
     content: '←';
-} */
+}
 
 /* Dots */
 .slick-dotted.slick-slider
@@ -160,16 +166,16 @@
     outline: none;
     background: transparent;
 }
-    .slick-dots li button:hover,
-    .slick-dots li button:focus
-    {
-        outline: none;
-    }
-    .slick-dots li button:hover:before,
-    .slick-dots li button:focus:before
-    {
-        opacity: 1;
-    }
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
 .slick-dots li button:before
 {
     font-family: 'slick';
@@ -196,93 +202,4 @@
 {
     opacity: .75;
     color: black;
-    
-}
-
-.slick-arrow {
-    /* position: relative; */
-    /* display: block; */
-    /* margin: 0 auto;  */
-    width: 3rem;
-    height: 3rem;
-    
-    
-    /* background: #ffa188; */
-    background-color: transparent;
-    border-radius: 1.625rem;
-    
-    
-}
-.slick-next, .slick-prev {
-    
-    top: 0;
-    bottom: 0;
-    /* margin: auto; */
-    margin-top: 40px;
-
-    position: relative;
-	
-	/* border: 4px solid #c2e1f5; */
-    
-}
-.slick-next {
-    margin-left: 20px;
-}
-.slick-prev {
-    margin-right: 20px;
-}
-.slick-prev::after, .slick-prev::before {
-    
-    right: 45%;
-	top: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-.slick-prev::after {
-    
-	
-    /* border-right-color: #ffa188; */
-    border-right-color: white;
-	border-width: 8px;
-	margin-top: -8px;
-    
-
-}
-
-.slick-prev::before {
-    border-color: rgba(194, 225, 245, 0);
-    /* border-right-color: white; */
-    border-right-color: #ffa188;
-	border-width: 16px;
-	margin-top: -16px;
-    
-}
-.slick-next::after, .slick-next::before {  
-    left: 40%;
-	top: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-.slick-next::after {
-    
-    /* border-left-color: #ffa188; */
-    border-left-color: white;
-    
-	border-width: 8px;
-    margin-top: -8px;
-}
-.slick-next::before {
-    border-color: rgba(194, 225, 245, 0);
-    /* border-left-color: white; */
-    border-left-color: #ffa188;
-	border-width: 16px;
-    margin-top: -16px;   
 }
