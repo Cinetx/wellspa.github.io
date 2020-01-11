@@ -1,21 +1,32 @@
 .contact {
     background-color: #f5f3f3;
-    
+    margin: 0 auto;
+    // padding-top: 2rem;
+    // padding-bottom: 2rem;
+    padding: 8rem;
+
 }
 .contact__wrapper {
-    width: 960px;
-    margin: 0 auto;
-    
+    // width: 960px;
+    // margin: 0 auto;
+    // padding-top: 2rem;
+    // padding-bottom: 2rem;
+}
+.contact__text {
+    margin-bottom: 2rem;
 }
 .contact__sub-wrapper{
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
 }
 .contact__form {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 70%;
+    flex-basis: 65%;
 
-    margin-top: 2rem;    
+    // margin-top: 2rem;    
 }
 .contact__form__info {
     display: flex;
@@ -29,14 +40,16 @@
 .contact__form__input{
     width: 100%;
     height: 40px;
-    border: 1px solid #666666;
-
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: .75rem 2.5rem .75rem 1rem;
     
 }
 .contact__form__select {
     margin-top: 2rem;
     position: relative;
     flex-basis: 100%;
+    // font-size: 1rem;
 }
 .contact__form__select select {
    
@@ -50,7 +63,7 @@
     -moz-appearance: none;/* Firefox */
     appearance: none;/* убираем дефолнтные стрелочки */
     font-family: inherit;/* наследует от родителя */
-    font-size: 1rem;
+    // font-size: 1rem;
     color: #444;
 }
 .contact__form__select:after {
@@ -66,15 +79,49 @@
     z-index: 1;
     margin-top: -3px;
 }
-.contact__info {
-    flex-basis: 30%;
-    
-}
+
 .contact__form__text {
     width: 100%;
-    height: 300px;
+    height: 200px;
 
     margin-top: 2rem;
 
-    border: 1px solid #666666;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: .75rem 2.5rem .75rem 1rem;
+
+    resize: none;
+    color: rgba(1, 1, 1, 0.3);
+}
+.contact__form__button {
+    margin-top: 2rem;
+    flex-basis: 50%;
+    height: 3rem;
+
+    background-color: $main_color;
+    
+    font-size: 1.6rem;
+    color: white;
+
+    border-radius: 1.625rem;
+    border: none;
+}
+
+.contact__info {
+    flex-basis: 30%;
+    // border: 2px solid red;
+    // margin-top: 2rem;
+    height: 350px;
+    
+    background-color: white;
+    
+    padding: 40px;
+}
+// .contact__info__wrapper {
+  
+//     height: 100%;
+    
+// }
+.contact__info__text {
+    margin-top: 2rem;
 }

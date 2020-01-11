@@ -1,5 +1,7 @@
 .header-bar {
   height: 600px;
+  padding-left: 8rem;
+  padding-right: 8rem;
 
   background: linear-gradient(rgba(0,0,0,0.5),
     rgba(0,0,0,0.5)),
@@ -14,7 +16,7 @@
 }
 
 .nav-bar {
-  width: 960px;
+  // width: 960px;
   margin: 0 auto;
 }
 .nav__list {
@@ -32,7 +34,7 @@
 }
 
 .info {
-  width: 960px;
+  // width: 960px;
   margin: 0 auto;
   margin-top: 120px;
   &__wrapper {

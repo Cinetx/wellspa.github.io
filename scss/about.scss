@@ -1,20 +1,67 @@
+// .about-us{
+//   width: 960px;
+//   margin: 0 auto;
+//   margin-top: 80px;
+// height: 400px;
+// display: flex;
+// justify-content: space-around;
+// }
+// .about__wrapper {
+//   width: 420px;
+//   align-self: center;
+// }
+
+// .about__title {
+//   // margin-top: 120px;
+// }
+
+// .about__me-1 {
+//   width: 200px;
+//   height: 300px;
+//   background-image: url('../images/man-2037255_640.jpg');
+//   background-size: cover;
+//   background-position: 50% 90%;
+//   align-self: flex-start;
+// }
+// .about__me-2 {
+//     width: 200px;
+//   height: 300px;
+//   background-image: url('../images/people-2563491_640.jpg');
+//   background-size: cover;
+//   background-position: 50% 90%;
+//   align-self: flex-end;
+// }
+
 .about-us{
-  width: 960px;
+  // width: 960px;
+  // padding-left: 10rem;
+  // padding-right: 10rem;
+  padding: 8rem;
   margin: 0 auto;
-  margin-top: 80px;
-height: 400px;
+  // margin-top: 80px;
+height: 500px;
 display: flex;
-justify-content: space-around;
+flex-wrap: wrap;
+justify-content: center;
+
+
 }
 .about__wrapper {
-  width: 420px;
+  // width: 420px;
   align-self: center;
+  flex-basis: 40%;
 }
 
 .about__title {
   // margin-top: 120px;
 }
 
+.about__me__img__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 40%;
+  
+}
 .about__me-1 {
   width: 200px;
   height: 300px;
@@ -31,6 +78,8 @@ justify-content: space-around;
   background-position: 50% 90%;
   align-self: flex-end;
 }
+
+
 
 
 

@@ -95,15 +95,17 @@
   <main class="main-bar">
     <section class="about-us">
       <div class="about__wrapper">
-      <h2 class="about__title">What is Lorem Ipsum?</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-      <svg class="" width="75" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inst"></use></svg>
-      <svg class="" width="75" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vk"></use></svg>
+        <h2 class="about__title">What is Lorem Ipsum?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <svg class="" width="75" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inst"></use></svg>
+        <svg class="" width="75" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vk"></use></svg>
       </div>
 
-      <div class="about__me-1"></div>
-      <div class="about__me-2"></div>
+      <div class="about__me__img__wrapper">
+        <div class="about__me-1"></div>
+        <div class="about__me-2"></div>
+      </div>
 
   </section>
   <section class="services">
@@ -239,16 +241,26 @@
               </div>
             </div>
             <div class="contact__form__select">
-              <select >
+              <!-- <p>Тип массажа</p> -->
+              <select>
+                <option class="test" value="none" hidden="">Выберите тип</option>
+                <!-- <option value="Тип массажа">Тип массажа</option> -->
                 <option value="">Детский</option>
                 <option value="">Спортивный</option>
-              </select>
+              </select >
             </div>
-            <input class="contact__form__text" type="text" placeholder="Текст">
-            <input type="submit" value="Send Message">  
+            <textarea class="contact__form__text">ТЕКСТ ДЛЯ ПРИМЕРА</textarea>
+            <input class="contact__form__button" type="submit" value="Записаться">  
+
+            
           </form>
         <div class="contact__info">
-
+          <!-- <div class="contact__info__wrapper"> -->
+            <h3 class="contact__info__title">Наши контакты:</h3>
+            <p class="contact__info__text">Address:<br>34 Street Name, City Name Here, United States</p>
+            <p class="contact__info__text">Phone:<br>
+              +1 242 4942 290</p>
+          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -258,8 +270,18 @@
 
 
 
-  <footer>
-
+  <footer class="footer-bar">
+    <h2 class="footer__title">Массаж СПБ</h2>
+    <nav class="footer__nav-bar">
+      <ul class="footer__nav__list">
+        <li><a href="" class="footer__list-item">Главная</a></li>
+        <li><a href="" class="footer__list-item">Сертификаты</a></li>
+        <li><a href="" class="footer__list-item">Услуги</a></li>
+        <li><a href="" class="footer__list-item">Отзывы</a></li>
+        <li><a href="" class="footer__list-item">Запись</a></li>
+      </ul>
+    </nav>
+    
   </footer>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
