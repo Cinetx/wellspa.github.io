@@ -16,15 +16,12 @@ $black: #ffa188;
   position: relative;
   display: inline-block;
   cursor: pointer;
-  // outline: none;
+
   border: 0;
 
-  // vertical-align: middle;
-  // text-decoration: none;
   background: transparent;
   padding: 0;
-  // font-size: inherit;
-  // font-family: inherit;
+ 
   &.services__button--all {
     width: 34rem;
     height: auto;
@@ -78,12 +75,8 @@ $black: #ffa188;
       justify-content: center;
       align-items: center;
 
-
-      // margin-left: 1rem;
-
-
       color: $black;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 700;
       text-transform: uppercase;
 
