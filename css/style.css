@@ -68,46 +68,34 @@ textarea,
 select {
   font: inherit; }
 
-.menu-icon--open {
-  display: inline-block;
-  width: 40px;
-  height: 30px;
-  border-top: 3px solid blue;
-  border-bottom: 3px solid blue;
-  position: relative; }
-
-.menu-icon--open::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 40px;
-  height: 3px;
-  top: 45%;
-  background-color: blue; }
-
 .header-bar {
   height: 600px;
   padding-left: 80px;
   padding-right: 80px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/physiotherapy-567021_1920.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
   color: white; }
 
 .nav-bar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 40px; }
   .nav-bar__logo {
-    flex-basis: 30%;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    fill: white; }
+    .nav-bar__logo:hover {
+      fill: #ffa188;
+      transition: 0.3s; }
 
 .nav__list {
   display: flex;
   justify-content: space-around;
-  flex-basis: 70%;
+  flex-grow: 1;
   align-items: center;
   height: 80px;
   align-items: center; }
@@ -116,18 +104,32 @@ select {
   text-decoration: none;
   color: white; }
 
+.list-item:hover,
+.list-item:focus {
+  color: #ffa188;
+  transition: 0.3s; }
+
+.list-item:active {
+  opacity: 0.3;
+  transition: 0.3s; }
+
 .info {
-  margin: 0 auto;
-  margin-top: 120px; }
+  width: 700px;
+  padding-top: 40px; }
   .info__title {
-    font-size: 28px; }
+    font-size: 2rem; }
   .info__text {
+    font-size: 1.4rem;
     margin-top: 40px; }
 
 @media (min-width: 960px) {
   .menu-icon--open {
     display: none; }
   .menu-icon--close {
+    display: none; }
+  .nav__list {
+    display: flex !important; }
+  .list-item--close {
     display: none; } }
 
 @media (max-width: 960px) {
@@ -141,9 +143,65 @@ select {
     background-attachment: fixed;
     color: white; }
   .nav-bar {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     margin: 0 auto;
-    width: 100%; }
+    width: 100%;
+    padding: 40px; }
+    .nav-bar__logo {
+      margin-bottom: 10px;
+      width: 100%;
+      height: 40px;
+      fill: white; }
+  .menu-icon--open {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2rem;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    position: relative; }
+  .menu-icon--open::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    top: 45%;
+    background-color: white; }
+  .menu-icon--open:hover,
+  .menu-icon--open:focus {
+    border-top: 3px solid #ffa188;
+    border-bottom: 3px solid #ffa188;
+    transition: 0.3s; }
+  .menu-icon--open:hover::after,
+  .menu-icon--open:focus::after {
+    background-color: #ffa188;
+    transition: 0.3s; }
+  .menu-icon--open:active {
+    opacity: 0.3;
+    transition: 0.3s; }
+  .menu-icon--close {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    width: 30px;
+    height: 34px; }
+  .menu-icon--close:before,
+  .menu-icon--close:after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    width: 2rem;
+    height: 0.1rem;
+    background: black; }
+  .menu-icon--close:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .menu-icon--close:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
   .nav__list {
     display: flex;
     justify-content: flex-start;
@@ -155,7 +213,8 @@ select {
     flex-basis: 100%;
     background-color: white;
     height: 100%;
-    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1); }
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+    z-index: 1; }
     .nav__list li {
       width: 100%; }
   .list-item {
@@ -168,10 +227,12 @@ select {
     color: black;
     font-size: 1.4rem;
     font-weight: 300;
-    background-color: white; } }
-
-.svg__test {
-  fill: white; }
+    background-color: white; }
+  .list-item--close {
+    position: relative; }
+  .info {
+    width: 100%;
+    padding: 40px; } }
 
 .list-item--close {
   display: inline-block; }
@@ -181,34 +242,6 @@ select {
   margin-right: 20px;
   height: 40px;
   width: 40px; }
-
-.list-item--close {
-  position: relative; }
-
-.menu-icon--close {
-  position: absolute;
-  top: 80%;
-  left: 70%;
-  width: 30px;
-  height: 34px; }
-
-.menu-icon--close:before,
-.menu-icon--close:after {
-  content: "";
-  position: absolute;
-  top: 40%;
-  left: 0%;
-  width: 26px;
-  height: 2px;
-  background: black; }
-
-.menu-icon--close:before {
-  webkit-transform: rotate(45deg);
-  transform: rotate(45deg); }
-
-.menu-icon--close:after {
-  webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
 
 .menu-open {
   display: block; }
