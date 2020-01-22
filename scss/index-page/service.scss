@@ -1,0 +1,108 @@
+.services {
+ 
+  padding-bottom: 40px;
+  margin: 0 auto;
+
+  background-color: #fcede8;
+}
+
+
+.item1 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_1.jpg');
+  background-size: cover;
+
+}
+.item2 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_2.jpg');
+  background-size: cover;
+
+
+}
+.item3 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_3.jpg');
+  background-size: cover;
+
+}
+.item4 {
+  background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/img_4.jpg');
+    background-size: cover;
+}
+
+.services__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.services__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  
+  color: white;
+
+  height: 300px;
+  padding: 50px;
+
+  transition: 0.9s;
+}
+
+
+.services__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.services__text {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+  //button кнопка
+
+
+
+@media (max-width: 960px) {  
+  .services__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
+@media (min-width: 960px) {
+  .services__wrapper:hover {
+    flex-grow: 3;
+    transition: 0.9s;
+    
+      .services__text {
+        opacity: 1;
+        transition: 0.9s;
+       }
+      }
+  .services__text{
+    width: 30rem;
+    margin-bottom: 2rem;
+
+    font-size: 1.2rem;
+        
+    transition: 0.9s;
+  }
+}
+@media (max-width: 640px){
+  .services__text{
+    width: 100%;
+    margin-bottom: 2rem;
+
+    font-size: 1.2rem;
+        
+    transition: 0.9s;
+  }
+}

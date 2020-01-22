@@ -1,11 +1,16 @@
 @import "scaffolding.scss";
+
 @import "navigation.scss";
-@import "about.scss";
-@import "reviews.scss";
-@import "contact.scss";
-@import "service.scss";
+
+
+
+
 @import "button.scss";
 @import "slick-theme.css";
 @import "footer.scss";
 
 
+@import "index-page/about.scss";
+@import "index-page/service.scss";
+@import "index-page/reviews.scss";
+@import "index-page/contact.scss";
