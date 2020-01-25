@@ -106,3 +106,19 @@
     transition: 0.9s;
   }
 }
+@media(max-width: 460px) {
+  
+  .services__wrapper {
+    height: 300px;
+    padding: 20px;
+  
+    
+  }
+  .services__title {
+    margin-bottom: 10px;
+  }
+  .services__text {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  }

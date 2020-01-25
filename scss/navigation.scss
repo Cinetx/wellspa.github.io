@@ -20,11 +20,11 @@
   display: flex;
   align-items:center;
   justify-content: space-between;
-  
+
   padding-top: 40px;
-  
-  
-  
+
+
+
   &__logo {
     margin-bottom: 10px;
     width: 100%;
@@ -37,27 +37,31 @@
     }
   }
 }
-.nav-bar__logo__wrapper {
-}
+
 .nav__list {
   display: flex;
+
   justify-content: space-around;
   
   flex-grow: 1;
   align-items:center;
-
+  
   height: 80px;
   align-items: center;
+  // display: none;
 }
 .list-item {
   text-decoration: none;
   color: white;
 }
+.list-item--active{
+  border-bottom: 2px solid $main_color;
+}
 .list-item:hover,
 .list-item:focus{
   color: $main_color;
   transition: 0.3s;
-  
+
 }
 .list-item:active {
   opacity: 0.3;
@@ -65,12 +69,12 @@
 
 }
 .info {
-  
+
   // margin: 0 auto;
   // margin-top: 120px;
   width: 700px;
   padding-top: 40px;
-  
+
   &__title {
     font-size: 2rem;
   }
@@ -87,29 +91,29 @@
     display: none;
   }
   .nav__list {
-    display: flex!important;
+    // display: flex!important;
   }
   .list-item--close {
     display: none;
   }
-  
+
 }
 @media(max-width: 960px) {
   .header-bar {
     height: 600px;
     padding-left: 0;
     padding-right: 0;
-  
+
     background: linear-gradient(rgba(0,0,0,0.5),
       rgba(0,0,0,0.5)),
       url('../images/physiotherapy-567021_1920.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-  
+
     color: white;
   }
-  
+
   .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -119,15 +123,15 @@
     margin: 0 auto;
     width: 100%;
     padding: 40px;
-    
 
-    
+
+
 
     &__logo {
       margin-bottom: 10px;
       width: 100%;
       height: 40px;
-      
+
       fill: white;
     }
   }
@@ -137,22 +141,22 @@
     height: 2rem;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
-  
-    position: relative; 
+
+    position: relative;
   }
-  
+
   .menu-icon--open::after {
     content: "";
     display: inline-block;
     position: absolute;
     width: 40px;
     height: 3px;
-    
+
     top: 45%;
     // border-bottom: 2px solid blue;
     background-color: white;
   }
-  
+
   .menu-icon--open:hover,
   .menu-icon--open:focus {
     border-top: 3px solid $main_color;
@@ -164,14 +168,14 @@
     background-color: $main_color;
     transition: 0.3s;
   }
-  
+
   .menu-icon--open:active {
     opacity: 0.3;
     transition: 0.3s;
   }
 
   .menu-icon--close {
-  
+
     position: absolute;
     top: 80%;
     left: 70%;
@@ -185,7 +189,7 @@
     position: absolute;
     top: 40%;
     left: 0%;
-    
+
     width: 2rem;
     height: 0.1rem;
     background: black;
@@ -201,16 +205,74 @@
     transform: rotate(-45deg);
 }
   .nav__list {
-    
+    display: none;
+
+    li {
+      width: 100%;
+
+    }
+  }
+  .list-item {
     display: flex;
-    
-    
+
+    justify-content: flex-start;
+
+    height: 60px;
+    padding: 30px;
+    flex-basis: 10%;
+
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 300;
+
+
+    background-color: white;
+    // display: none;
+  }
+  .list-item--close {
+    position: relative;
+  }
+
+
+  .info {
+    width: 100%;
+    padding: 40px;
+
+  }
+
+  .menu-open{
+    display: flex!important;
+
+
     justify-content: flex-start;
     flex-direction: column;
 
     position: fixed;
     width: 300px;
-    
+
+    right: 0;
+    top: 0;
+    flex-basis: 100%;
+
+    background-color: white;
+    height: 100%;
+
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+
+    z-index: 1;
+
+  }
+  .menu-close {
+    display: flex!important;
+
+
+    justify-content: flex-start;
+    flex-direction: column;
+
+    position: fixed;
+    width: 300px;
+
     right: 0;
     top: 0;
     flex-basis: 100%;
@@ -222,37 +284,6 @@
 
     z-index: 1;
     
-    li {
-      width: 100%;
-      
-    }
-  }
-  .list-item {
-    display: flex;
-    
-    justify-content: flex-start;
-
-    height: 60px;
-    padding: 30px;
-    flex-basis: 10%;
-    
-    text-decoration: none;
-    color: black;
-    font-size: 1.4rem;
-    font-weight: 300;
-    
-    
-    background-color: white;
-  }
-  .list-item--close {
-    position: relative;
-  }
-  
-
-  .info {
-    width: 100%;
-    padding: 40px;
-
   }
 }
 
@@ -264,17 +295,15 @@
 .nav-bar--close {
   // display: inline-block;
   float: right;
-  
+
   margin-right: 20px;
   // border: 4px solid red;
   height: 40px;
   width: 40px;
 }
 
-.menu-open{
-  display: block;
- 
-}
-.menu-close {
-  display: none; 
-}
+@media(max-width: 460px) {
+  .nav-bar__logo {
+    width: 90%;   
+    }
+  }

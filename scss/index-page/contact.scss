@@ -177,3 +177,13 @@
         margin-bottom: 20px;
     }
 }
+
+@media(max-width: 460px) {
+    .contact {
+        margin: 0 auto;
+        padding: 15px;
+    
+        background-color: #f5f3f3;
+    }
+    
+    }

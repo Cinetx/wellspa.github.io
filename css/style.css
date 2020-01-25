@@ -104,6 +104,9 @@ select {
   text-decoration: none;
   color: white; }
 
+.list-item--active {
+  border-bottom: 2px solid #ffa188; }
+
 .list-item:hover,
 .list-item:focus {
   color: #ffa188;
@@ -127,8 +130,6 @@ select {
     display: none; }
   .menu-icon--close {
     display: none; }
-  .nav__list {
-    display: flex !important; }
   .list-item--close {
     display: none; } }
 
@@ -203,18 +204,7 @@ select {
     webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); }
   .nav__list {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    position: fixed;
-    width: 300px;
-    right: 0;
-    top: 0;
-    flex-basis: 100%;
-    background-color: white;
-    height: 100%;
-    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
-    z-index: 1; }
+    display: none; }
     .nav__list li {
       width: 100%; }
   .list-item {
@@ -232,7 +222,33 @@ select {
     position: relative; }
   .info {
     width: 100%;
-    padding: 40px; } }
+    padding: 40px; }
+  .menu-open {
+    display: flex !important;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    width: 300px;
+    right: 0;
+    top: 0;
+    flex-basis: 100%;
+    background-color: white;
+    height: 100%;
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+    z-index: 1; }
+  .menu-close {
+    display: flex !important;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    width: 300px;
+    right: 0;
+    top: 0;
+    flex-basis: 100%;
+    background-color: white;
+    height: 100%;
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+    z-index: 1; } }
 
 .list-item--close {
   display: inline-block; }
@@ -243,11 +259,9 @@ select {
   height: 40px;
   width: 40px; }
 
-.menu-open {
-  display: block; }
-
-.menu-close {
-  display: none; }
+@media (max-width: 460px) {
+  .nav-bar__logo {
+    width: 90%; } }
 
 .button {
   position: relative;
@@ -325,7 +339,7 @@ select {
   background: transparent;
   padding: 0; }
   .button.services__button--all {
-    width: 34rem;
+    width: 30rem;
     height: auto;
     margin-top: 40px; }
     .button.services__button--all .circle {
@@ -382,9 +396,52 @@ select {
   .button:hover .button-text {
     color: #fff; }
 
+@media (max-width: 640px) {
+  .button.services__button--all {
+    width: 100%;
+    padding: 20px; }
+  .button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    padding: 0; }
+    .button.services__button--all {
+      width: 100%;
+      height: auto;
+      margin-top: 40px; }
+      .button.services__button--all .circle {
+        display: none; }
+      .button.services__button--all .button-text {
+        text-align: center; } }
+
+@media (max-width: 460px) {
+  .button.services__button--all {
+    width: 100%;
+    padding: 10px; }
+  .button__wrapper--all {
+    display: flex;
+    justify-content: center; }
+  .button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    padding: 0; }
+    .button.services__button--all {
+      width: 100%;
+      height: auto;
+      margin-top: 40px; }
+      .button.services__button--all .circle {
+        display: none; }
+      .button.services__button--all .button-text {
+        text-align: center; } }
+
 .footer-bar {
   height: 400px;
-  padding: 8rem;
+  padding: 80px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wellness-589774_1920.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -419,16 +476,31 @@ select {
 .footer__list-item:active {
   color: #ffa188; }
 
+@media (max-width: 460px) {
+  .footer-bar {
+    height: 100%;
+    padding: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wellness-589774_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white; }
+  .footer__nav__list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%; } }
+
 .about-us {
   padding: 40px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-around; }
 
 .about__wrapper {
   align-self: center;
-  flex-basis: 40%; }
+  flex-basis: 40%;
+  margin-bottom: 20px; }
 
 .about__me__img__wrapper {
   display: flex;
@@ -460,6 +532,24 @@ select {
   .about__me__img__wrapper {
     flex-basis: 100%;
     height: 100%; } }
+
+@media (max-width: 460px) {
+  .about-us {
+    padding: 20px; }
+  .about__me-1 {
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/man-2037255_640.jpg");
+    background-size: cover;
+    background-position: 50% 90%;
+    align-self: flex-start; }
+  .about__me-2 {
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/people-2563491_640.jpg");
+    background-size: cover;
+    background-position: 50% 90%;
+    align-self: flex-end; } }
 
 .services {
   padding-bottom: 40px;
@@ -527,6 +617,16 @@ select {
     margin-bottom: 2rem;
     font-size: 1.2rem;
     transition: 0.9s; } }
+
+@media (max-width: 460px) {
+  .services__wrapper {
+    height: 300px;
+    padding: 20px; }
+  .services__title {
+    margin-bottom: 10px; }
+  .services__text {
+    margin-bottom: 10px;
+    font-size: 1.2rem; } }
 
 .reviews {
   margin-top: 80px;
@@ -861,3 +961,9 @@ select {
   .contact__form__input-wrapper {
     width: 100%;
     margin-bottom: 20px; } }
+
+@media (max-width: 460px) {
+  .contact {
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #f5f3f3; } }

@@ -32,7 +32,8 @@ gulp.task('serve', function () {
   });
 
   gulp.watch("*.html",  gulp.parallel('style')).on("change", reload);
-  gulp.watch("./scss/*.scss",  gulp.parallel('style')).on("change", reload);
+  gulp.watch("./scss/*/*.scss",  gulp.parallel('style')).on("change", stream);
+  gulp.watch("./scss/*.scss",  gulp.parallel('style')).on("change", stream);
   // gulp.watch("./slick/*.css",  gulp.parallel('style')).on("change", reload);
 
   // gulp.watch("./css/*.css").on("change", reload);
