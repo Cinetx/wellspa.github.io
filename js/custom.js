@@ -16,3 +16,6 @@ $('.reviews__wrapper').slick({
     }
     ]
   });
+
+
+  

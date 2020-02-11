@@ -125,7 +125,7 @@ select {
     font-size: 1.4rem;
     margin-top: 40px; }
 
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
   .menu-icon--open {
     display: none; }
   .menu-icon--close {
@@ -133,14 +133,12 @@ select {
   .list-item--close {
     display: none; } }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .header-bar {
     height: 600px;
-    padding-left: 0;
-    padding-right: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/physiotherapy-567021_1920.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-attachment: fixed;
     color: white; }
   .nav-bar {
@@ -262,6 +260,35 @@ select {
 @media (max-width: 460px) {
   .nav-bar__logo {
     width: 90%; } }
+
+.service-page .header-bar {
+  height: 150px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/physiotherapy-567021_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  color: white; }
+
+.service-page .info {
+  background-color: #fcede8;
+  width: 100%; }
+
+.service-page .info__wrapper {
+  padding: 80px;
+  width: 50%;
+  height: 400px; }
+
+.massage-page .header-bar {
+  height: 600px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/photo-1470843810958-2da815d0e041.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  color: white; }
 
 .button {
   position: relative;
@@ -524,7 +551,7 @@ select {
   background-position: 50% 90%;
   align-self: flex-end; }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .about-us {
     padding-bottom: 40px; }
   .about__wrapper {
@@ -557,20 +584,16 @@ select {
   background-color: #fcede8; }
 
 .item1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/img_1.jpg");
-  background-size: cover; }
+  background: url("../images/img_1.jpg"); }
 
 .item2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/img_2.jpg");
-  background-size: cover; }
+  background: url("../images/img_2.jpg"); }
 
 .item3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/img_3.jpg");
-  background-size: cover; }
+  background: url("../images/img_3.jpg"); }
 
 .item4 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/img_4.jpg");
-  background-size: cover; }
+  background: url("../images/img_4.jpg"); }
 
 .services__content {
   display: flex;
@@ -583,7 +606,9 @@ select {
   color: white;
   height: 300px;
   padding: 50px;
-  transition: 0.9s; }
+  transition: 0.9s;
+  box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.5) inset;
+  background-size: cover; }
 
 .services__title {
   font-size: 2rem;
@@ -593,12 +618,12 @@ select {
   margin-bottom: 20px;
   font-size: 1.2rem; }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .services__content {
     display: flex;
     flex-direction: column; } }
 
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
   .services__wrapper:hover {
     flex-grow: 3;
     transition: 0.9s; }
@@ -807,6 +832,32 @@ select {
   margin-top: -16px;
   border-width: 16px; }
 
+.reviews-page {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+  padding: 80px; }
+  .reviews-page .reviews__text {
+    font-size: 1rem;
+    line-height: 24px; }
+  .reviews-page .reviews__name {
+    font-size: 1.1rem;
+    font-weight: bold; }
+
+.reviews__block {
+  border: 2px solid #ffa188;
+  padding: 40px; }
+
+.reviews-big {
+  grid-column: span 4; }
+
+.reviews-medium {
+  grid-column: span 3; }
+
+.reviews-small {
+  grid-column: span 2; }
+
 .contact {
   margin: 0 auto;
   padding: 80px;
@@ -935,7 +986,7 @@ select {
 .contact__info__text {
   margin-top: 20px; }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .contact__wrapper {
     flex-direction: column; }
   .contact__form__button {
@@ -967,3 +1018,84 @@ select {
     margin: 0 auto;
     padding: 15px;
     background-color: #f5f3f3; } }
+
+.certificates__main__wrapper {
+  display: flex;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: center; }
+
+.certificates__navigation {
+  flex-basis: 20%; }
+
+.certificates__navigation__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  height: 100%; }
+
+.certificates__content {
+  flex-basis: 60%;
+  min-width: 0;
+  border-bottom: 2px solid #ffa188; }
+
+.certificates__navigation .slick-track {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%; }
+
+.certificates__navigation__list {
+  width: 100% !important;
+  padding: 5px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0); }
+
+.certificates__content_wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  margin-left: 20px; }
+
+.certificates__content_sub-wrapper {
+  flex-basis: 60%;
+  height: 300px; }
+
+.certificates__title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem; }
+
+.certificates__text {
+  margin-bottom: 20px;
+  font-size: 1.2rem; }
+
+.certificates__img__wrapper {
+  display: flex;
+  flex-basis: 30%; }
+
+.certificates__img {
+  width: 150px;
+  height: 200px; }
+
+.slider-massage-nav .slick-current {
+  cursor: pointer;
+  border-bottom: 2px solid #ffa188;
+  transition: 0.3s;
+  outline: none; }
+
+.certificates__content .slick-slide {
+  outline: none; }
+
+.slider-massage-nav .slick-active:hover,
+.slider-massage-nav .slick-active:focus {
+  color: #ffa188;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none; }
+
+.slider-massage-nav .slick-active:active {
+  color: #fcede8;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none; }

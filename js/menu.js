@@ -1,13 +1,14 @@
-var icon_open = document.querySelector('.menu-icon--open');
-var icon_close = document.querySelector('.menu-icon--close');
-var nav_menu = document.querySelector('.nav__list');
+var iconOpen = document.querySelector('.menu-icon--open');
+var iconClose = document.querySelector('.menu-icon--close');
+var navMenu = document.querySelector('.nav__list');
 
-icon_close.addEventListener('click', function (evt){
-    nav_menu.classList.toggle('menu-close');
+var menuClickHandler = function (){
+    navMenu.classList.toggle('menu-close');
+};
+
+iconClose.addEventListener('click', function (evt){
+    menuClickHandler();
 });
-icon_open.addEventListener('click', function (evt){
-    nav_menu.classList.toggle('menu-close');
+iconOpen.addEventListener('click', function (evt){
+    menuClickHandler();
 });
-
-
-
